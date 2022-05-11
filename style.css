@@ -1,0 +1,910 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+/* font-family: 'Roboto Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300&display=swap');
+/* font-family: 'Bai Jamjuree', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 2rem 0;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 0px 20px rgb(126, 126, 126);
+    z-index: 4;
+}
+nav img{
+    width: 5vw;
+    height: 5vw;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}
+nav ul li{
+    font-size: 2vw;
+    list-style-type: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    width: 100%;
+    text-align: center;
+}
+nav ul .dropdown{
+    position: relative;
+}
+nav ul .dropdown ul{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: .5vw 0 0 0;
+    margin-top: 0vw;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 4px 3px black;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+}
+nav ul .dropdown ul li{
+    padding: 0vw 0 .5vw 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5vw;
+    transition: .25s;
+}
+nav ul .dropdown:hover ul{
+    display: flex;
+}
+nav ul .dropdown ul:hover{
+    display: flex;
+}
+nav ul .dropdown ul li:hover{
+    background-color: rgb(170, 170, 170);
+}
+
+
+.home-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.home-container .open-text{
+    font-family: 'Roboto Mono', monospace;
+    width: 70%;
+}
+.home-container .open-text h1{
+    font-size: 5vw;
+    text-align: center;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    margin: 3vw 0;
+    padding: 1vw 0;
+}
+.home-container .open-text p{
+    font-size: 2vw;
+    text-align: center;
+}
+.home-container .intro{
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 10vw 0 0vw ;
+}
+.home-container .intro .block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2vw 2vw;
+    padding: 2vw;
+}
+.home-container .intro .block img{
+    width: 10vw;
+}
+.home-container .intro .block h1{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2vw;
+    margin: 1vw 0;
+}
+.home-container .intro .block p{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    padding: 1vw 0;
+    border-top: 1px solid black;
+}
+
+.course{
+    width: 80%;
+    margin: 2rem auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.chooseWeek{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.chooseWeek h1{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5vw;
+    padding-right: .5vw;
+}
+.chooseWeek select{
+    font-size: 2vw;
+    background-color: transparent;
+    border: none;
+}
+.chooseWeek select option{
+    font-size: 1.5vw;
+}
+.course .showCWeek{
+    width: 90%;
+    margin: 0 auto;
+}
+.course .showCWeek table{
+    width: 100%;
+    margin: 2vw 0;
+}
+.course .showCWeek table tr:nth-child(2n){
+    background-color: rgb(235, 233, 233);
+}
+.course .showCWeek table tr th{
+    font-size: 1.5vw;
+    width: 40%;
+    font-family: 'Roboto Mono', monospace;
+}
+.course .showCWeek table tr th p{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.25vw;
+}
+.course .showCWeek table tr td{
+    font-size: 1.5vw;
+    width: 60%;
+    padding: 2vw 1vw;
+    font-family: 'Roboto Mono', monospace;
+}
+.course .showCWeek table tr p{
+    font-size: 1.5vw;
+    width: 90%;
+    padding: .5vw .25vw;
+    font-family: 'Roboto Mono', monospace;
+}
+.course .showCWeek table tr td.relative{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.course .showCWeek table tr td.relative .static{
+    position: static;
+    border: 1px solid black;
+    width: 70%;
+    text-align: center;
+    padding: 1vw;
+    margin: 0 auto;
+}
+.course .showCWeek table tr td.relative .relative .absolute{
+    position: absolute;
+    border: 1px solid black;
+    width: 40%;
+    text-align: center;
+    right: 0;
+    top: 0;
+    background-color: white;
+}
+.course .showCWeek table tr td.relative .relative{
+    position: relative;
+    height: 20vw;
+    border: 1px solid black;
+    width: 80%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    text-align: center;
+}
+.course .showCWeek table tr td.relative .fixed{
+    position: fixed;
+    border: 1px solid black;
+    width: 40%;
+    height: 10vw;
+    background-color: lightblue;
+    top: 50%;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+.course .showCWeek table tr td.relative button{
+    width: 90%;
+    font-size: 2vw;
+    font-family: 'Roboto Mono', monospace;
+}
+.course .showCWeek table tr td.relative .sticky{
+    position: sticky;
+    position: -webkit-sticky;
+    border: 1px solid black;
+    width: 100%;
+    height: 2vw;
+    background-color: lightblue;
+    top: 0;
+}
+.course .showCWeek table tr td.relative .flex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.course .showCWeek table tr td.relative .flex p{
+    padding: 1vw .5vw;
+}
+.course .showCWeek table tr td.relative .flex .row{
+    display: inherit;
+    flex-direction: row;
+}
+.course .showCWeek table tr td.relative .flex .jf-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.course .showCWeek table tr td.relative .flex .jf-around{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.course .showCWeek table tr td.relative .flex .jf-evenly{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.course .showCWeek table tr td.relative .flex .ai-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 6vw;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+}
+.course .showCWeek table tr td.relative .flex .ai-fs{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 6vw;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+}
+.course .showCWeek table tr td.relative .flex .ai-fe{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 6vw;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+}
+.course .showCWeek table tr td .grid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.course .showCWeek table tr td .grid p{
+    padding: 1vw .5vw;
+}
+.course .showCWeek table tr td .grid .tem-col{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    height: 10vw;
+}
+.course .showCWeek table tr td .grid .tem-row{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    height: 20vw;
+}
+.course .showCWeek table tr td .grid .column{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    height: 20vw;
+}
+.course .showCWeek table tr td .grid .column .redbox{
+    grid-column: 1 / 3;
+    background-color: pink;
+    width: 100%;
+}
+.course .showCWeek table tr td .grid .row{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    height: 20vw;
+}
+.course .showCWeek table tr td .grid .row .redbox{
+    grid-row: 1 / 3;
+    background-color: pink;
+    height: 80%;
+}
+.course .showCWeek table tr td .grid .rg{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    height: 20vw;
+}
+.course .showCWeek table tr td .grid .cg{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    height: 10vw;
+}
+.redbox{
+    width: 4vw;
+    height: 4vw;
+    background-color: pink;
+}
+.bluebox{
+    width: 4vw;
+    height: 4vw;
+    background-color: lightblue;
+}
+.greenbox{
+    width: 4vw;
+    height: 4vw;
+    background-color: lightseagreen;
+}
+.orangebox{
+    width: 4vw;
+    height: 4vw;
+    background-color: lightsalmon;
+}
+
+.exam{
+    width: 80%;
+    margin: 2rem auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.exam .showExam{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.exam .showExam p{
+    font-size: 2vw;
+}
+.exam .showExam .require ol{
+    margin-left: 2vw;
+}
+.exam .showExam .require ol li{
+    font-size: 1.5vw;
+}
+.exam .showExam .require ol li ul li{
+    list-style-type: disc;
+    margin-left: 2vw;
+}
+.exam .showExam .example{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 2vw;
+    margin: 1vw 0;
+    height: fit-content;
+}
+.exam .showExam .example h1{
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2vw;
+}
+.exam .showExam .example img{
+    width: 30vw;
+    margin: 1vw;
+}
+.exam .showExam .example table{
+    margin: 2vw 0;
+}
+.exam .showExam .example table th, .exam .showExam .example table td{
+    font-size: 2vw;
+    font-family: 'Roboto Mono', monospace;
+}
+.exam .showExam .example table th{
+    width: 40%;
+    text-align: end;
+    padding: 0 1vw 0 0;
+}
+.exam .showExam .example table td{
+    width: 60%;
+    text-align: start;
+}
+.exam .showExam .example a img{
+    width: 4vw;
+    height: 4vw;
+}
+.exam .showExam .example .clock{
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 100%;
+    background-color: whitesmoke;
+    border: 1vw solid darkblue;
+}
+.exam .showExam .example .clock::after{
+    content: "";
+    position: absolute;
+    width: 1vw;
+    height: 50% ;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    border-radius: 25px;
+    transform-origin: top;
+    animation: runClock 2s infinite linear;
+    animation-play-state: paused;
+}
+.exam .showExam .example:hover .clock::after{
+    animation-play-state: running;
+}
+@keyframes runClock{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.exam .showExam .example.long{
+    height: 35vw;
+    justify-content: start;
+}
+.exam .showExam .example nav{
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 2rem 0;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 0px 20px rgb(126, 126, 126);
+    z-index: 3;
+}
+.exam .showExam .example nav img{
+    width: 5vw;
+    height: 5vw;
+}
+.exam .showExam .example nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}
+.exam .showExam .example nav ul li{
+    font-size: 1.5vw;
+    list-style-type: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+.exam .showExam .example nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    width: 100%;
+    text-align: center;
+}
+.exam .showExam .example nav ul .dropdown{
+    position: relative;
+}
+.exam .showExam .example nav ul .dropdown ul{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: .5vw 0 0 0;
+    margin-top: 0vw;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 4px 3px black;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+}
+.exam .showExam .example nav ul .dropdown ul li{
+    padding: 0vw 0 .5vw 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5vw;
+    transition: .25s;
+}
+.exam .showExam .example nav ul .dropdown:hover ul{
+    display: flex;
+}
+.exam .showExam .example nav ul .dropdown ul:hover{
+    display: flex;
+}
+.exam .showExam .example nav ul .dropdown ul li:hover{
+    background-color: rgb(170, 170, 170);
+}
+.exam .showExam .example .timeline-cont{
+    position: relative;
+    width: 100%;
+}
+.exam .showExam .example .timeline-cont::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: black;
+}
+.exam .showExam .example .timeline-cont .timeline-blog{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: unset;
+    width: 40%;
+    border: 2.5px solid black;
+    padding: 1vw;
+    margin: 8vw 0 0 0;
+}
+.exam .showExam .example .timeline-cont .timeline-blog.right{
+    left: 55%;
+}
+.exam .showExam .example .timeline-cont .timeline-blog.left{
+    left: 5%;
+}
+.exam .showExam .example .timeline-cont .timeline-blog.right .icon{
+    position: absolute;
+    left: 0%;
+    top: 0;
+    transform: translate(-105%, -100%);
+    background-color: white;
+    z-index: 2;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+.exam .showExam .example .timeline-cont .timeline-blog.left .icon{
+    position: absolute;
+    right: 0%;
+    top: 0;
+    transform: translate(70%, -100%);
+    background-color: white;
+    z-index: 2;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+.exam .showExam .example .timeline-cont .timeline-blog .icon img{
+    width: 4vw;
+}
+.exam .showExam .example .timeline-cont .timeline-blog .image{
+    position: relative;
+}
+.exam .showExam .example .timeline-cont .timeline-blog .image img{
+    width: 15vw;
+    border-radius: 25px;
+}
+.exam .showExam .example .timeline-cont .timeline-blog .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+.exam .showExam .example .timeline-cont .timeline-blog.right .content::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    border: 1px solid black;
+    top: -10%;
+    left: -2%;
+}
+.exam .showExam .example .timeline-cont .timeline-blog.left .content::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    border: 1px solid black;
+    top: -10%;
+    left: 2%;
+}
+.exam .showExam .example .timeline-cont .timeline-blog .content::before{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    border-left: .25vw solid black;
+    border-right: .25vw solid black;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.exam .showExam .example .timeline-cont .timeline-blog .content h1{
+    font-size: 2vw;
+}
+.exam .showExam .example .timeline-cont .timeline-blog .content p{
+    font-size: 1.5vw;
+}
+.exam .showExam .example .game{
+    position: relative;
+    width: 100%;
+    height: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exam .showExam .example .game button{
+    position: absolute;
+    font-size: 2vw;
+    width: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border-radius: 25px;
+    box-shadow: 0px 10px 20px 5px black;
+}
+.exam .showExam .example .game button:hover{
+    box-shadow: 0px 0px 20px black;
+    border: 5px solid black;
+    border-bottom: none;
+}
+.exam .showExam .example .game .game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.exam .showExam .example .game .game-container .question #question{
+    display: none;
+}
+.exam .showExam .example .game .game-container .choice-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 80%;
+}
+.exam .showExam .example .game .game-container .choice-container h1{
+    display: none;
+    text-align: start;
+    width: 80%;
+    height: 100%;
+    margin: 5vw;
+    cursor: pointer;
+}
+.exam .showExam .example .scoreboard{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.exam .showExam .example .scoreboard div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.exam .showExam .example .scoreboard div h1{
+    font-size: 2.5vw;
+    font-family: 'Roboto Mono', monospace;
+}
+.exam .showExam .example .num-container{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.exam .showExam .example button{
+    width: 20%;
+    font-size: 2vw;
+}
+.exam .showExam .example .num-container .num-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.exam .showExam .example .num-container .num-con img{
+    width: 10vw;
+}
+.exam .showExam .example .cate-nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 5vw;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 0 5vw;
+    overflow: hidden;
+}
+.exam .showExam .example .cate-nav .cate{
+    position: relative;
+    font-size: 2vw;
+    width: 100%;
+    cursor: pointer;
+}
+.exam .showExam .example .cate-nav #tab{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-color: lightblue;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+.exam .showExam .example .cate-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 2.5vw;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5vw 0;
+    width: 90%;
+    height: fit-content;
+}
+.exam .showExam .example .cate-container .cate-blog{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 50px;
+}
+.exam .showExam .example .cate-container .cate-blog img{
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+}
+.exam .showExam .example .cate-container .cate-blog .cate-content{
+    position: absolute;
+    width: 15vw;
+    left: 0;
+    bottom: 0;
+    transform: translateY(50%);
+    background-color: whitesmoke;
+    transition: .5s;
+}
+.exam .showExam .example .cate-container .cate-blog:hover .cate-content{
+    transform: translateY(0);
+}
+.exam .showExam .example .cate-container .cate-blog .cate-content h1{
+    font-size: 2vw;
+    padding: 0 0 0 1.5vw;
+    width: fit-content;
+}
+.exam .showExam .example .cate-container .cate-blog .cate-content p{
+    font-size: 1vw;   
+    padding: 0 1vw 1vw;
+}
