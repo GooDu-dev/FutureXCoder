@@ -216,6 +216,52 @@ nav ul .dropdown ul li:hover{
     padding: .5vw .25vw;
     font-family: 'Roboto Mono', monospace;
 }
+.course .showCWeek table tr td .content{
+    position: relative;
+    font-size: 2vw;
+}
+.course .showCWeek table tr td .example{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.course .showCWeek table tr td .example .linear{
+    animation: run 2s linear infinite;
+}
+.course .showCWeek table tr td .example .ease-in{
+    animation: run 2s ease-in infinite;
+}
+.course .showCWeek table tr td .example .ease-in-out{
+    animation: run 2s ease-in-out infinite;
+}
+.course .showCWeek table tr td .example .ease-out{
+    animation: run 2s ease-out infinite;
+}
+@keyframes run{
+    from{
+        left: 0;
+    }
+    to{
+        left: 90%;
+    }
+}
+.course .showCWeek table tr td .example .hover{
+    left: 0;
+    transition: 2s;
+}
+.course .showCWeek table tr td .example:hover .hover{
+    left: 90%;
+}
+.course .showCWeek table tr td .example .focus{
+    background-color: whitesmoke;
+    width: 40%;
+    height: 2vw;
+}
+.course .showCWeek table tr td .example .focus:focus{
+    background-color: lightblue;
+}
 .course .showCWeek table tr td.relative{
     position: relative;
     width: 100%;
@@ -420,21 +466,25 @@ nav ul .dropdown ul li:hover{
     height: 10vw;
 }
 .redbox{
+    position: relative;
     width: 4vw;
     height: 4vw;
     background-color: pink;
 }
 .bluebox{
+    position: relative;
     width: 4vw;
     height: 4vw;
     background-color: lightblue;
 }
 .greenbox{
+    position: relative;
     width: 4vw;
     height: 4vw;
     background-color: lightseagreen;
 }
 .orangebox{
+    position: relative;
     width: 4vw;
     height: 4vw;
     background-color: lightsalmon;

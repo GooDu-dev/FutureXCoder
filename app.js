@@ -83,7 +83,22 @@ function chooseCWeek(cw){
                 </tr>
                 <tr>
                     <th>@keyframes</th>
-                    <td>create your own animation</td>
+                    <td>
+                        <div class="content">
+                            <p>create your own animation</p>
+                        </div>
+                        <br>
+                        <div class="example">
+                            <p>animation : run 2s linear infinite</p>
+                            <div class="redbox linear"></div>
+                            <p>aniamtion : run 2s ease-in infinite</p>
+                            <div class="bluebox ease-in"></div>
+                            <p>animation : run 2s ease-in-out infinite</p>
+                            <div class="greenbox ease-in-out"></div>
+                            <p>animation : run 2s ease-out infinite</p>
+                            <div class="orangebox ease-out"></div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <th>transition</th>
@@ -92,16 +107,30 @@ function chooseCWeek(cw){
                 </tr>
                 <tr>
                     <th>:hover</th>
-                    <td>when element is hovered, run this code
+                    <td>
+                        <div class="content">
+                            <p>when element is hovered, run this code</p>
+                        </div>
+                        <div class="example">
+                            <p>transition : 2s;</p>
+                            <div class="redbox hover"></div>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <th>:focus</th>
-                    <td>when element is on focus, run this code
+                    <td>
+                        <div class="content">
+                            <p>when element is on focus, run this code</p>
+                        </div>
+                        <div class="example">
+                            <label for="name">Name</label>
+                            <input class="focus" type="text">
+                        </div>
                     </td>
                 </tr>
             </table>
-                    </div>`
+        </div>`
             break;
         case 3:
             text = `<div id="week3">
@@ -161,7 +190,7 @@ function chooseCWeek(cw){
                     </td>
                 </tr>
             </table>
-                    </div>`
+        </div>`
             break;
         case 4:
             text = `<div id="week4">
@@ -678,3 +707,20 @@ function showEWeek(){
     let select = document.getElementById("chooseEWeek")
     chooseEWeek(Number(select.value))
 }
+
+function navCheck(){
+    let buttons = document.querySelectorAll(".button")
+    buttons.forEach(button =>{
+        button.addEventListener("click", function(){
+            let type = button.getAttribute("type")
+            let unique = Number(button.getAttribute("unique"))
+            if(type == "course"){
+                chooseCWeek(unique)
+            }
+            else if(type == "exam"){
+                chooseEWeek(unique)
+            }
+        })
+    })
+}
+navCheck()
