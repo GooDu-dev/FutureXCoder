@@ -124,6 +124,7 @@ function chooseCWeek(cw){
                             <p>when element is on focus, run this code</p>
                         </div>
                         <div class="example">
+                            <p>transition: .5s;</p>
                             <label for="name">Name</label>
                             <input class="focus" type="text">
                         </div>
@@ -464,39 +465,36 @@ function chooseEWeek(ew){
             </div>
             <p>ตัวอย่าง</p>
             <div class="example long">
-                <nav>
-                    <img src="./asset/image/nav.png" alt="">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li class="dropdown">
-                            <a>Course</a>
-                            <ul>
-                                <li><a href="#cw1">Basic tags</a></li>
-                                <li><a href="#cw2">Animation</a></li>
-                                <li><a href="#cw3">Position</a></li>
-                                <li><a href="#cw4">Display</a></li>
-                                <li><a href="#cw5">Basic Js</a></li>
-                                <li><a href="#cw6">If & Loop</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a>Exam</a>
-                            <ul>
-                                <li><a href="#ew1">exam-1</a></li>
-                                <li><a href="#ew2">exam-2</a></li>
-                                <li><a href="#ew3">exam-3</a></li>
-                                <li><a href="#ew4">exam-4</a></li>
-                                <li><a href="#ew5">exam-5</a></li>
-                                <li><a href="#ew6">exam-6</a></li>
-                                <li><a href="#ew7">exam-7</a></li>
-                                <li><a href="#ew8">exam-8</a></li>
-                                <li><a href="#ew9">exam-9</a></li>
-                                <li><a href="#ew10">exam-10</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#aboutus">About Us</a></li>
-                    </ul>
-                </nav>
+                <nav id="nav">
+                <img src="./asset/image/nav.png" alt="">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a>Course</a>
+                        <ul>
+                            <li><a class="button" type="course" unique="1" href="#course">Basic tags</a></li>
+                            <li><a class="button" type="course" unique="2" href="#course">Animation</a></li>
+                            <li><a class="button" type="course" unique="3" href="#course">Position</a></li>
+                            <li><a class="button" type="course" unique="4" href="#course">Display</a></li>
+                            <li><a class="button" type="course" unique="5" href="#course">Basic Js</a></li>
+                            <li><a class="button" type="course" unique="6" href="#course">If & Loop</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Exam</a>
+                        <ul>
+                            <li><a class="button" type="exam" unique="1" href="#exam">First Web</a></li>
+                            <li><a class="button" type="exam" unique="2" href="#exam">Clock</a></li>
+                            <li><a class="button" type="exam" unique="3" href="#exam">Navbar</a></li>
+                            <li><a class="button" type="exam" unique="4" href="#exam">Timeline</a></li>
+                            <li><a class="button" type="exam" unique="5" href="#exam">Quiz Game</a></li>
+                            <li><a class="button" type="exam" unique="6" href="#exam">Number Count</a></li>
+                            <li><a class="button" type="exam" unique="7" href="#exam">Category</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#aboutus">About Us</a></li>
+                </ul>
+            </nav>
             </div>`
             break;
         case 4:

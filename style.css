@@ -10,6 +10,10 @@
     margin: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 nav{
     display: flex;
     position: fixed;
@@ -258,6 +262,7 @@ nav ul .dropdown ul li:hover{
     background-color: whitesmoke;
     width: 40%;
     height: 2vw;
+    transition: .5s;
 }
 .course .showCWeek table tr td .example .focus:focus{
     background-color: lightblue;
@@ -957,4 +962,61 @@ nav ul .dropdown ul li:hover{
 .exam .showExam .example .cate-container .cate-blog .cate-content p{
     font-size: 1vw;   
     padding: 0 1vw 1vw;
+}
+
+.aboutus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vw;
+    margin-bottom: 5vw;
+}
+.aboutus img{
+    width: 20vw;
+}
+.aboutus .content{
+    width: 90%;
+    height: 17vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5vw;
+}
+.aboutus .content h1{
+    justify-self: start;
+    margin: 0 auto;
+    font-size: 3vw;
+    padding-bottom: .5vw;
+    border-bottom: 5px solid black;
+    font-family: 'Roboto Mono', monospace;
+}
+.aboutus .content h2{
+    width: 60%;
+    text-align: start;
+    margin: 0 auto;
+    font-size: 1.5vw;
+    padding: 2.5vw;
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+}
+.aboutus .content h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    width: 5vw;
+    height: 5vw;
+}
+.aboutus .content h2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 5px solid black;
+    border-top: 5px solid black;
+    width: 5vw;
+    height: 5vw;
 }
